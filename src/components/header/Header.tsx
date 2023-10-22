@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import {Navigation} from "src/components/header/Navigation.tsx";
 import {Logo} from "src/components/logo/Logo.tsx";
-import svgSprite from '../../assets/icons/svgSprite.svg'
+
 
 export const Header = () => {
     return (
         <StyleHeader>
             <Logo/>
-            <svg>
-                <use xlinkHref={`${svgSprite}#redux`}/>
-            </svg>
             <Navigation/>
         </StyleHeader>
     )
