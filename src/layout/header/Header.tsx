@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Navigation} from "src/components/header/Navigation.tsx";
+import {Menu} from "src/components/menu/Menu.tsx";
 import {Logo} from "src/components/logo/Logo.tsx";
 
 
@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <StyleHeader>
             <Logo/>
-            <Navigation/>
+            <Menu/>
         </StyleHeader>
     )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Navigation = () => {
+export const Menu = () => {
     return (
         <StyledNavigation>
             <ul>
