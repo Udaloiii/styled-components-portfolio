@@ -1,5 +1,6 @@
 import {Header} from "src/layout/header/Header.tsx";
 import {Main} from "src/layout/sections/main/Main.tsx";
+import {Skills} from "src/layout/sections/skills/Skills.tsx";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
             {/*<Title>Welcome to IT-INCUBATOR</Title>*/}
             <Header/>
             <Main/>
-
+            <Skills/>
         </div>
     );
 }
