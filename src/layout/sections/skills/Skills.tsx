@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Skill} from "src/components/skills/skill/Skill.tsx";
+import {Skill} from "src/components/skill/Skill.tsx";
 import {Icon} from "src/components/icon/Icon.tsx";
 
 export const Skills = () => {
@@ -27,7 +27,6 @@ export const Skills = () => {
 
 
 const StyledSkills = styled.section`
-  padding: 20px;
   width: 100%;
   height: 100vh;
   background-color: #3b7bee;
