@@ -7,12 +7,18 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Title fontFamily={"Broadway, sans-serif"} fontSize={"1.5rem"}>My skills</Title>
-            <FlexWrapper gap={"20px"}>
-                <Skill iconId={"react"} title={"react"}/>
-                <Skill iconId={"redux"} title={"redux"}/>
-                <Skill iconId={"styledComponents"} title={"styledComponents"} width={"230"} height={"230"}
-                       viewBox={"0 0 256 256"}/>
-                <Skill iconId={"typescript"} title={"typescript"} viewBox={"0 0 16 16"}/>
+            <FlexWrapper gap={"15px"} wrap={"wrap"} justify={"space-between"} width={"80%"}>
+                <Skill iconId={"typescript"} title={"Typescript"} viewBox={"0 0 16 16"}/>
+                <Skill iconId={"react"} title={"React"} width={"180"} height={"180"}/>
+                <Skill iconId={"redux"} title={"Redux"}/>
+                <Skill iconId={"styledComponents"} title={"Styled components"}
+                       viewBox={"0 0 512 512"}/>
+                <Skill iconId={"css"} title={"Css"} viewBox={"0 0 256 256"}/>
+                <Skill iconId={"scss"} title={"Scss"} viewBox={"0 0 640 512"}/>
+                <Skill iconId={"github"} title={"Github"} viewBox={"0 0 20 20"}/>
+                <Skill iconId={"storybook"} title={"Storybook"}/>
+                <Skill iconId={"api"} title={"Api"}/>
+                <Skill iconId={"axios"} title={"Axios"}/>
             </FlexWrapper>
         </StyledSkills>
     )
