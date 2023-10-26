@@ -12,20 +12,27 @@ export const Skill = ({iconId, title, width, height, viewBox}: SkillPropsType) =
     return (
         <StyledSkill>
             <StyledTitle>{title}</StyledTitle>
-            <Icon iconId={iconId} width={width || "170"} height={height || "170"} viewBox={viewBox}/>
+            <Icon iconId={iconId} width={width || "160"} height={height || "160"} viewBox={viewBox || "0 0 24 24"}/>
         </StyledSkill>
     )
 }
 const StyledSkill = styled.div`
-  margin: 20px 0;
+  margin: 20px 10px;
   padding: 0;
-  width: 200px;
+  width:25%;
   height: 200px;
-  background-color: bisque;
+  //background-color: bisque;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: .3s;
+  
+  &:hover {
+    transform: scale(1.1);
+    transition: .3s;
+    box-shadow: 0 0 40px 15px rgba(2,37,65,.5);
+  }
 `
 const StyledTitle = styled.h3`
   padding: 0;
