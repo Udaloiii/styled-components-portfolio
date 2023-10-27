@@ -12,7 +12,6 @@ export const Main = () => {
                     <MainTitle>Im frontend developer</MainTitle>
                 </div>
                 <StyledImg src={avatar} alt="Eugene Udalykh"/>
-                {/*<Skills/>*/}
             </FlexWrapper>
         </StyleMain>
     )
@@ -40,5 +39,5 @@ const Name = styled.h2`
   display: flex;
 `
 const Text = styled.span`
-    display: flex;
+  display: flex;
 `
