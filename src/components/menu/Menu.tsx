@@ -1,24 +1,13 @@
 import styled from "styled-components";
 
-export const Menu = () => {
+type MenuPropsType = {
+    items?: string[]
+}
+export const Menu = ({items}: MenuPropsType) => {
     return (
         <StyledNavigation>
             <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Skills</a>
-                </li>
-                <li>
-                    <a href="">Works</a>
-                </li>
-                <li>
-                    <a href="">Testimony</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
+                {items?.map((el, index) => <li key={index}><a href={`#${el}`}>{el}</a></li>)}
             </ul>
         </StyledNavigation>
     )
@@ -26,7 +15,6 @@ export const Menu = () => {
 
 const StyledNavigation = styled.nav`
   height: 100%;
-  background-color: #99b4e7;
   display: flex;
   align-items: center;
 
@@ -36,7 +24,7 @@ const StyledNavigation = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
   }
 
   & a {
@@ -69,7 +57,6 @@ const StyledNavigation = styled.nav`
   }
 
   @media screen and (max-width: 576px) {
-    //width: 100%;
     & ul {
       margin: 0;
     }
