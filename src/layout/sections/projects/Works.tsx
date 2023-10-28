@@ -8,7 +8,7 @@ const menuWorksItems = ["All", "Landing page", "React", "Spa"]
 export const Works = () => {
     return (
         <StyledProjects id="Works">
-            <Title fontFamily={"Broadway, sans-serif"} fontSize={"1.5rem"}>
+            <Title>
                 My works
             </Title>
             <FlexWrapper justify={"center"}>

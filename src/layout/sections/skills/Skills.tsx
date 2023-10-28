@@ -6,7 +6,7 @@ import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 export const Skills = () => {
     return (
         <StyledSkills id="Skills">
-            <Title fontFamily={"Broadway, sans-serif"} fontSize={"1.5rem"}>My skills</Title>
+            <Title>My skills</Title>
             <FlexWrapper gap={"15px"} wrap={"wrap"} justify={"space-between"} width={"80%"}>
                 <Skill iconId={"typescript"} title={"Typescript"} viewBox={"0 0 16 16"}/>
                 <Skill iconId={"react"} title={"React"} width={"180"} height={"180"}/>
