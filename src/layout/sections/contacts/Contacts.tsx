@@ -1,18 +1,17 @@
 import styled from "styled-components";
 import {Title} from "src/components/title/Title.tsx";
 import {Input} from "src/components/input/Input.tsx";
-import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 
 export const Contacts = () => {
     return (
-        <StyledContacts>
+        <StyledContacts id={"Contact"}>
             <Title>Contacts</Title>
-            <FlexWrapper direction={"column"} align={"center"} gap={"20px"}>
+            <StyledForm >
                 <Input name={"name"}/>
                 <Input name={'email'}/>
                 <StyledTextArea placeholder={"text"}/>
-                <StyledButton>Send message</StyledButton>
-            </FlexWrapper>
+                <StyledButton type={"submit"}>Send message</StyledButton>
+            </StyledForm>
         </StyledContacts>
     )
 }
@@ -20,6 +19,12 @@ export const Contacts = () => {
 const StyledContacts = styled.section`
   background-color: bisque;
   min-height: 100vh;
+`
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 `
 
 const StyledTextArea = styled.textarea`
