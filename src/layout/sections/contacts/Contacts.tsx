@@ -65,7 +65,7 @@ const StyledButton = styled.button`
   &:active {
     transform: scale(0.9);
     transition: .2s;
-    box-shadow: 0 0 5px 3px rgb(30, 30, 30);
+    box-shadow: 0 0 8px 6px rgb(45, 83, 131);
   }
 
 `
