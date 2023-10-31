@@ -28,8 +28,6 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   width: 100%;
   min-height: 100vh;
-  background-color: #3b7bee;
-  //display: flex;
-  //flex-wrap: wrap;
-  //gap: 20px;
+  //background-color: #3b7bee;
+
 `
