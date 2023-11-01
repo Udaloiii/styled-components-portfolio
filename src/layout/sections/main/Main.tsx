@@ -8,22 +8,22 @@ export const Main = () => {
         <StyleMain id="Home">
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
-                <div>
-                    <Text>Hi there!</Text>
-                    <Name>Im Eugene Udalykh</Name>
-                    <MainTitle>Im frontend developer</MainTitle>
-                </div>
-                <StyledImg src={avatar} alt="Eugene Udalykh"/>
-            </FlexWrapper>
+                    <div>
+                        <Text>Hi there!</Text>
+                        <Name>Im Eugene Udalykh</Name>
+                        <MainTitle>Im frontend developer</MainTitle>
+                    </div>
+                    <StyledImg src={avatar} alt="Eugene Udalykh"/>
+                </FlexWrapper>
             </Container>
         </StyleMain>
     )
 }
-const StyleMain = styled.div`
-  margin-top:60px;
-  //padding: 20px 0;
+const StyleMain = styled.section`
   width: 100%;
   min-height: 100vh;
+  height: 100vh; // добавил чтобы длина была на всю страницу если уберу, то контейнер будет по длине картинки)
+  padding-top: 60px; // чтобы при скролле учитывало длину Header
   //background-color: #02323f;
 `
 const StyledImg = styled.img`

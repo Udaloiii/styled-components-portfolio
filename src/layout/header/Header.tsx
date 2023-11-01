@@ -9,7 +9,8 @@ export const Header = () => {
     return (
         <StyleHeader >
             <Container>
-                <FlexWrapper justify={"space-between"} align={"center"}><Logo/>
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <Logo/>
                     <Menu items={menuHeaderItems}/>
                 </FlexWrapper>
             </Container>
@@ -23,7 +24,7 @@ export const StyleHeader = styled.header`
   z-index: 99999;
   width: 100%;
   height: 60px;
-  background-color: green;
+  background-color: rgba(49, 49, 49, 0.85);
   display: flex;
   align-items: center;
   justify-content: space-between;

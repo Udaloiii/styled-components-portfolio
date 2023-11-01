@@ -30,11 +30,12 @@ const StyledNavigation = styled.nav`
   & a {
     color: white;
     transition: .3s;
-    font-family: "Bradley Hand ITC", sans-serif;
+    //font-family: "Bradley Hand ITC", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 1.5rem;
 
     &:hover {
-      color: #0041ab;
+      color: #0654e0;
       transition: .3s;
       text-shadow: 2px 2px 2px rgb(255, 255, 255);
     }
