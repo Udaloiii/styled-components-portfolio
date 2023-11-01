@@ -28,6 +28,7 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   min-height: max-content;
   background-color: aquamarine;
+  padding-top: 60px; // чтобы при скролле учитывало длину Header
 `
 
 const StyledName = styled.h3`

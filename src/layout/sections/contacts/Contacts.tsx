@@ -19,6 +19,8 @@ export const Contacts = () => {
 const StyledContacts = styled.section`
   //background-color: bisque;
   min-height: 100vh;
+  border: 1px solid grey;
+  padding-top: 60px; // чтобы при скролле учитывало длину Header
 `
 const StyledForm = styled.form`
   display: flex;

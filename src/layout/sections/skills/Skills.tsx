@@ -29,5 +29,6 @@ const StyledSkills = styled.section`
   width: 100%;
   min-height: 100vh;
   //background-color: #3b7bee;
-
+  border: 1px solid grey;
+  padding-top: 60px; // чтобы при скролле учитывало длину Header
 `
