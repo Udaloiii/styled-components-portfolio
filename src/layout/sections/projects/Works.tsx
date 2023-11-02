@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 import {Project} from "src/layout/sections/projects/project/Project.tsx";
 import {Title} from "src/components/title/Title.tsx";
-import {Menu} from "src/components/menu/Menu.tsx";
+import {WorksMenu} from "src/components/worksMenu/WorksMenu.tsx";
 
 const menuWorksItems = ["All", "Landing page", "React", "Spa"]
 export const Works = () => {
@@ -12,7 +12,7 @@ export const Works = () => {
                 My works
             </Title>
             <FlexWrapper justify={"center"}>
-                <Menu items={menuWorksItems}/>
+                <WorksMenu items={menuWorksItems}/>
             </FlexWrapper>
             <FlexWrapper width={"80%"} justify={"space-between"}>
                 <Project title={"Easy Task"} text={""} linkDemo={"https://todolist-on-redux.vercel.app/"}
