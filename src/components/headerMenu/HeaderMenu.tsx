@@ -90,6 +90,7 @@ const Mask = styled.span`
   height: 50%;
   overflow-y: hidden;
   color: ${theme.color.accent};
+  transition: .2s;
 
   & + & {
     top: 50%;
@@ -97,6 +98,7 @@ const Mask = styled.span`
     span {
       display: inline-block;
       transform: translateY(-50%);
+      transition: .2s;
     }
   }
 `
@@ -107,7 +109,7 @@ const ListItem = styled.li`
   &::before {
     content: "";
     display: inline-block;
-    height: 3px;
+    height: 2px;
     background-color: ${theme.color.accent};
 
     position: absolute;
@@ -116,19 +118,23 @@ const ListItem = styled.li`
     right: -10px;
     z-index: 1;
     transform: scale(0);
+    transition: .2s;
   }
 
   &:hover {
     &::before {
       transform: scale(1);
+      transition: .2s;
     }
 
     ${Mask} {
       transform: skewX(12deg) translateX(3px);
       color: ${theme.color.font};
+      transition: .2s;
 
       & + ${Mask} {
         transform: skewX(12deg) translateX(-3px);
+        transition: .2s;
       }
     }
   }
