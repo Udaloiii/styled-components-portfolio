@@ -17,26 +17,28 @@ export const Skill = ({iconId, title, width, height, viewBox}: SkillPropsType) =
     )
 }
 const StyledSkill = styled.div`
-  margin: 20px 10px;
-  padding: 0;
-  width:25%;
+  margin: 15px 0;
+  padding: 10px;
+  width: 25%;
   height: 200px;
-  //background-color: bisque;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   transition: .3s;
-  
+
   &:hover {
     transform: scale(1.1);
     transition: .3s;
-    box-shadow: 0 0 40px 15px rgba(2,37,65,.5);
+    box-shadow: 0 0 15px 7px rgba(178, 178, 178, 0.5);
   }
 `
 const StyledTitle = styled.h3`
-  padding: 0;
-  font-family: "Calibri", sans-serif;
-  letter-spacing: 2px;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 `
 
