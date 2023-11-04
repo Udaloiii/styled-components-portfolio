@@ -15,7 +15,7 @@ export const Project = ({title, text, logo, linkDemo, linkCode}: ProjectPropsTyp
             <StyledTitle>
                 {title}
             </StyledTitle>
-            <FlexWrapper>
+            <FlexWrapper align={"flex-start"}>
                 <StyledLink href={linkDemo} target={"_blank"}>
                     Demo
                 </StyledLink>
@@ -85,7 +85,7 @@ const StyledLink = styled.a`
     content: "";
     position: absolute;
     left: 12px;
-    bottom: 15px;
+    top: 40px;
     width: 70%;
     height: 4px;
     background-color: cornflowerblue;

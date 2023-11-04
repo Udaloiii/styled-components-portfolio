@@ -47,8 +47,9 @@ const WrapperForImg = styled.div`
 
 `
 const StyledImg = styled.img`
-  border: 1px solid #e5e4e4;
-  background: rgba(68, 68, 68, 0.95);
+  //border: 1px solid #e5e4e4;
+  background: rgba(215, 215, 215, 0.95);
+  box-shadow: 0 0 8px 5px rgba(232, 232, 232, 0.8);
   border-radius: 10px;
   width: 350px;
   height: 450px;
