@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {FlexWrapper} from "src/components/FlexWrapper.tsx";
+import {Button} from "src/components/button/Button.tsx";
 
 type ProjectPropsType = {
     title: string
@@ -8,22 +8,22 @@ type ProjectPropsType = {
     linkCode?: string
     logo?: string
 }
-export const Project = ({title, text, logo, linkDemo, linkCode}: ProjectPropsType) => {
+export const Project = ({title, logo, linkDemo, linkCode}: ProjectPropsType) => {
     return (
         <StyledProject>
-            <StyledImg src={logo} alt="logo"/>
+            <ImageWrapper>
+                <StyledImg src={logo} alt="logo"/>
+                <Button>view project</Button>
+            </ImageWrapper>
             <StyledTitle>
                 {title}
             </StyledTitle>
-            <FlexWrapper align={"flex-start"}>
                 <StyledLink href={linkDemo} target={"_blank"}>
                     Demo
                 </StyledLink>
                 <StyledLink href={linkCode} target={"_blank"}>
                     Code
                 </StyledLink>
-            </FlexWrapper>
-
         </StyledProject>
 
 
@@ -31,16 +31,33 @@ export const Project = ({title, text, logo, linkDemo, linkCode}: ProjectPropsTyp
 }
 
 const StyledProject = styled.div`
+  position: relative;
   border-radius: 14px;
-  width: 400px;
-  height: 350px;
+  width: 40%;
   background-color: azure;
-  transition: .3s;
+  //transition: .3s;
+  padding: 0 0 20px;
 
   &:hover {
     transform: scale(1.05);
-    transition: .3s;
+    transition: .2s;
   }
+
+  & + & + & {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    padding: 0 0 15px;
+
+    & + & {
+      margin-top: 50px;
+    }
+  }
+
 `
 
 const StyledTitle = styled.h3`
@@ -55,31 +72,72 @@ const StyledTitle = styled.h3`
   letter-spacing: 1px;
   padding: 10px;
 `
+const ImageWrapper=styled.div`
+  position: relative;
+  transition: 0s;
 
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    transition: 0s;
+  }
+
+  ${Button} {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      transition: 0s;
+    }
+
+    ${Button} {
+      opacity: 1;
+
+      &::before {
+        width: 170px;
+        height: 32px;
+      }
+    }
+  }
+`
 const StyledImg = styled.img`
-  width: 400px;
+  width: 100%;
   height: 250px;
   object-fit: cover;
   border-top-right-radius: 14px;
   border-top-left-radius: 14px;
+
+  
+  @media  screen and (max-width: 768px) {
+      height: 150px;
+    }
 `
 const StyledLink = styled.a`
   position: relative;
-  font-family: Poppins, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: black;
   padding: 20px;
-
-  //&:hover {
-  //  text-decoration: underline;
-  //  text-decoration-color: cornflowerblue;
-  //  text-decoration-thickness: 5px;
-  //}
+  cursor: pointer;
 
   &::after {
     content: "";
