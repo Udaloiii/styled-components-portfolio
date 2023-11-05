@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Title} from "src/components/title/Title.tsx";
 import {Input} from "src/components/input/Input.tsx";
+import {Button} from "src/components/button/Button.tsx";
 
 export const Contacts = () => {
     return (
@@ -10,7 +11,8 @@ export const Contacts = () => {
                 <Input name={"name"}/>
                 <Input name={'email'}/>
                 <StyledTextArea placeholder={"text"}/>
-                <StyledButton type={"submit"}>Send message</StyledButton>
+                {/*<StyledButton type={"submit"}>Send message</StyledButton>*/}
+                <Button type={"submit"}>Send message</Button>
             </StyledForm>
         </StyledContacts>
     )
@@ -47,27 +49,26 @@ const StyledTextArea = styled.textarea`
   }
 `
 
-const StyledButton = styled.button`
-  padding: 12px 14px;
-  outline: none;
-  border: none;
-  background-color: cornflowerblue;
-  transition: .2s;
-  color: bisque;
-  font-size: 1rem;
-  border-radius: 14px;
-  text-transform: uppercase;
-
-  &:hover {
-    box-shadow: 0 0 5px 2px rgb(45, 83, 131);
-    transition: .2s;
-    color: #fdeedd;
-  }
-
-  &:active {
-    transform: scale(0.9);
-    transition: .2s;
-    box-shadow: 0 0 8px 6px rgb(45, 83, 131);
-  }
-
-`
+// const StyledButton = styled.button`
+//   padding: 12px 14px;
+//   outline: none;
+//   border: none;
+//   background-color: cornflowerblue;
+//   transition: .2s;
+//   color: bisque;
+//   font-size: 1rem;
+//   border-radius: 14px;
+//   text-transform: uppercase;
+//
+//   &:hover {
+//     box-shadow: 0 0 5px 2px rgb(45, 83, 131);
+//     transition: .2s;
+//     color: #fdeedd;
+//   }
+//
+//   &:active {
+//     transform: scale(0.9);
+//     transition: .2s;
+//     box-shadow: 0 0 8px 6px rgb(45, 83, 131);
+//   }
+// `
