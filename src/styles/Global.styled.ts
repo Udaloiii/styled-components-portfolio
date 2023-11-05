@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: ${theme.color.font};
   }
 
   ul {
@@ -36,5 +37,6 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     background-color: unset;
     border: none;
+    color: ${theme.color.font};
   }
 `
