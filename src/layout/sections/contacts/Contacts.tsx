@@ -2,37 +2,43 @@ import styled from "styled-components";
 import {Title} from "src/components/title/Title.tsx";
 import {Input} from "src/components/input/Input.tsx";
 import {Button} from "src/components/button/Button.tsx";
+import {Container} from "src/components/container/Container.tsx";
+import {theme} from "src/styles/Theme.tsx";
 
 export const Contacts = () => {
     return (
         <StyledContacts id={"Contact"}>
-            <Title>Contacts</Title>
-            <StyledForm >
-                <Input name={"name"}/>
-                <Input name={'email'}/>
-                <StyledTextArea placeholder={"text"}/>
-                {/*<StyledButton type={"submit"}>Send message</StyledButton>*/}
-                <Button type={"submit"}>Send message</Button>
-            </StyledForm>
+            <Container >
+                <Title>Contacts</Title>
+                <StyledForm>
+                    <Input name={"name"}/>
+                    <Input name={'email'}/>
+                    <StyledTextArea placeholder={"text"}/>
+                    <Button type={"submit"}>Send message</Button>
+                </StyledForm>
+            </Container>
         </StyledContacts>
     )
 }
 
 const StyledContacts = styled.section`
-  //background-color: bisque;
-  min-height: 100vh;
-  border: 1px solid grey;
-  padding-top: 60px; // чтобы при скролле учитывало длину Header
+  //padding-top: 60px; // чтобы при скролле учитывало длину Header
+  margin-bottom: 50px;
 `
 const StyledForm = styled.form`
+  margin: 0 auto;
+  max-width: 540px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 0 0 20px;
 `
 
 const StyledTextArea = styled.textarea`
-  width: 540px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
   height: 155px;
   padding: 5px 10px;
   resize: none;
@@ -40,35 +46,11 @@ const StyledTextArea = styled.textarea`
   transition: .3s;
   border-radius: 4px;
   background: #252527;
-  color: bisque;
+  color: ${theme.color.font};
 
   &:focus {
-    border-color: cornflowerblue;
+    border-color: ${theme.color.accent};
     transition: .3s;
     transform: scale(1.02);
   }
 `
-
-// const StyledButton = styled.button`
-//   padding: 12px 14px;
-//   outline: none;
-//   border: none;
-//   background-color: cornflowerblue;
-//   transition: .2s;
-//   color: bisque;
-//   font-size: 1rem;
-//   border-radius: 14px;
-//   text-transform: uppercase;
-//
-//   &:hover {
-//     box-shadow: 0 0 5px 2px rgb(45, 83, 131);
-//     transition: .2s;
-//     color: #fdeedd;
-//   }
-//
-//   &:active {
-//     transform: scale(0.9);
-//     transition: .2s;
-//     box-shadow: 0 0 8px 6px rgb(45, 83, 131);
-//   }
-// `

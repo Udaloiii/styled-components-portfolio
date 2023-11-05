@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Button} from "src/components/button/Button.tsx";
+import {Link} from "src/components/link/Link.tsx";
 
 type ProjectPropsType = {
     title: string
@@ -18,12 +19,14 @@ export const Project = ({title, logo, linkDemo, linkCode}: ProjectPropsType) => 
             <StyledTitle>
                 {title}
             </StyledTitle>
-                <StyledLink href={linkDemo} target={"_blank"}>
-                    Demo
-                </StyledLink>
-                <StyledLink href={linkCode} target={"_blank"}>
+            <LinkWrapper>
+                <Link href={linkDemo} target={"_blank"} color={"black"}>
+                Demo
+            </Link>
+                <Link href={linkCode} target={"_blank"} color={"black"}>
                     Code
-                </StyledLink>
+                </Link>
+            </LinkWrapper>
         </StyledProject>
 
 
@@ -48,7 +51,7 @@ const StyledProject = styled.div`
     margin-bottom: 50px;
   }
 
-  
+
   @media screen and (max-width: 768px) {
     width: 80%;
     padding: 0 0 15px;
@@ -72,7 +75,7 @@ const StyledTitle = styled.h3`
   letter-spacing: 1px;
   padding: 10px;
 `
-const ImageWrapper=styled.div`
+const ImageWrapper = styled.div`
   position: relative;
   transition: 0s;
 
@@ -123,37 +126,50 @@ const StyledImg = styled.img`
   border-top-right-radius: 14px;
   border-top-left-radius: 14px;
 
-  
-  @media  screen and (max-width: 768px) {
-      height: 150px;
+
+  @media screen and (max-width: 768px) {
+    height: 150px;
+  }
+`
+
+const LinkWrapper = styled.div`
+  ${Link} {
+    padding: 0 20px 0;
+
+    &:hover {
+      &::before {
+        width: 60%;
+      }
     }
-`
-const StyledLink = styled.a`
-  position: relative;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: black;
-  padding: 20px;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 12px;
-    top: 40px;
-    width: 70%;
-    height: 4px;
-    background-color: cornflowerblue;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
   }
 
-  &:hover::after {
-    visibility: visible;
-    transform: scaleX(1);
-  }
 `
+// const StyledLink = styled.a`
+//   position: relative;
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: normal;
+//   letter-spacing: 1px;
+//   text-transform: uppercase;
+//   color: black;
+//   padding: 20px;
+//   cursor: pointer;
+//
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 12px;
+//     top: 35px;
+//     width: 70%;
+//     height: 4px;
+//     background-color: ${theme.color.accent};
+//     //visibility: hidden;
+//     transform: scaleX(0);
+//     transition: transform 0.2s ease-in-out;
+//   }
+//
+//   &:hover::after {
+//     visibility: visible;
+//     transform: scaleX(1);
+//   }
+// `

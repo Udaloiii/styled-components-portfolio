@@ -30,7 +30,6 @@ export const Works = () => {
 
 const StyledProjects = styled.section`
   min-height: 100vh;
-  border: 1px solid grey;
   padding-top: 60px; // чтобы при скролле учитывало длину Header
   
 

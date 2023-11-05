@@ -4,10 +4,10 @@ import {Logo} from "src/components/logo/Logo.tsx";
 import {Container} from "src/components/container/Container.tsx";
 import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 
-const menuHeaderItems = ["Home", "Skills", "Works", "Testimony", "Contact"]
+const menuHeaderItems = ["Home", "Skills", "Works", "Contact"]
 export const Header = () => {
     return (
-        <StyleHeader >
+        <StyleHeader>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
@@ -24,7 +24,6 @@ export const StyleHeader = styled.header`
   z-index: 99999;
   width: 100%;
   height: 60px;
-  background-color: rgba(49, 49, 49, 0.85);
   display: flex;
   align-items: center;
   justify-content: space-between;

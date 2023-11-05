@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 import {Icon} from "src/components/icon/Icon.tsx";
+import {Container} from "src/components/container/Container.tsx";
 
 const iconsForContacts = [
     {id: "linkedin", href: "https://www.linkedin.com/in/eugene-udalykh/"},
@@ -10,25 +11,26 @@ const iconsForContacts = [
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper direction={"column"} gap={"20px"} align={"center"}>
-                <StyledName>
-                    I'm Available For Freelance
-                </StyledName>
-                <FlexWrapper justify={"center"} align={"center"} gap={"30px"}>
-                    {iconsForContacts.map((el, index) => <WrapperForIcon key={index} href={el.href}
-                                                                         target="_blank"><Icon
-                        iconId={el.id}/></WrapperForIcon>)}
+            <Container>
+                <FlexWrapper direction={"column"} gap={"20px"} align={"center"}>
+                    <StyledName>
+                        I'm Available For Freelance
+                    </StyledName>
+                    <FlexWrapper justify={"center"} align={"center"} gap={"30px"}>
+                        {iconsForContacts.map((el, index) => <WrapperForIcon key={index} href={el.href}
+                                                                             target="_blank"><Icon
+                            iconId={el.id}/></WrapperForIcon>)}
+                    </FlexWrapper>
+                    <StyledSpan>© 2023 Eugene Udalykh | All Rights Reserved.</StyledSpan>
                 </FlexWrapper>
-                <StyledSpan>© 2023 Eugene Udalykh | All Rights Reserved.</StyledSpan>
-            </FlexWrapper>
+            </Container>
         </StyledFooter>
     )
 }
 
 const StyledFooter = styled.footer`
   min-height: max-content;
-  background-color: aquamarine;
-  padding-top: 60px; // чтобы при скролле учитывало длину Header
+  //padding-top: 60px; // чтобы при скролле учитывало длину Header
 `
 
 const StyledName = styled.h3`
@@ -63,7 +65,7 @@ const WrapperForIcon = styled.a`
   }
 `
 const StyledSpan = styled.span`
-  color: rgba(108, 108, 108, 0.5);
+  color: rgb(189, 189, 189);
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 12px;
