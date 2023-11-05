@@ -8,6 +8,7 @@ export const Button =styled.button`
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: .2s;
+  z-index: 0;
 
 
   &::before {

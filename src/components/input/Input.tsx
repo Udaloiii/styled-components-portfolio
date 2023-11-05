@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "src/styles/Theme.tsx";
 
 type InputPropsType = {
     name:string
@@ -13,18 +14,19 @@ export const Input = ({name}:InputPropsType) => {
 }
 
 const StyledInput = styled.input`
-    outline: none;
-  width: 540px;
-  height: 32px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 40px;
   border: 1px solid #4A4A4A;
   border-radius: 4px;
   background: #252527;
   padding: 5px 10px;
-  color: bisque;
+  color: ${theme.color.font};
   transition: .3s;
-  
+
   &:focus {
-    border-color: cornflowerblue;
+    border-color: ${theme.color.accent};
     transition: .3s;
     transform: scale(1.02);
   }
