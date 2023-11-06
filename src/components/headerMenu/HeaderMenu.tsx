@@ -40,27 +40,31 @@ const StyledNavigation = styled.nav`
     }
   }
 
-  @media screen and (max-width: 576px) {
-    & ul {
-      margin: 0;
-    }
+  //@media screen and (max-width: 576px) {
+  //  & ul {
+  //    margin: 0;
+  //  }
+  //
+  //  & a {
+  //    font-size: 1rem;
+  //  }
+  //}
+  //
+  //@media screen and (max-width: 320px) {
+  //  & ul {
+  //    padding: 0 9px;
+  //    gap: 9px;
+  //  }
+  //
+  //  & a {
+  //    font-size: 0.9rem;
+  //  }
+  //}
 
-    & a {
-      font-size: 1rem;
-    }
+  // поменял на это
+  @media ${theme.media.mobile} {
+    display: none;
   }
-
-  @media screen and (max-width: 320px) {
-    & ul {
-      padding: 0 9px;
-      gap: 9px;
-    }
-
-    & a {
-      font-size: 0.9rem;
-    }
-  }
-
 `
 
 
@@ -69,16 +73,11 @@ const Link = styled.a`
   transition: .3s;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
-
-  &:hover {
-    //transition: .3s;
-    //text-shadow: 2px 2px 2px rgb(255, 255, 255);
-  }
+  
 
   &:active {
     color: #0041ab;
     transition: .1s;
-    //text-shadow: 2px 2px 2px rgb(255, 255, 255);
   }
 `
 
@@ -138,5 +137,4 @@ const ListItem = styled.li`
       }
     }
   }
-
 `
