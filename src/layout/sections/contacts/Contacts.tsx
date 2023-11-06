@@ -44,8 +44,9 @@ const StyledTextArea = styled.textarea`
   resize: none;
   outline: none;
   transition: .3s;
+  border: 1px solid ${theme.color.primary};
   border-radius: 4px;
-  background: #252527;
+  background: ${theme.color.secondary};
   color: ${theme.color.font};
 
   &:focus {

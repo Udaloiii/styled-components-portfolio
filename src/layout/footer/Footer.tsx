@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 import {Icon} from "src/components/icon/Icon.tsx";
 import {Container} from "src/components/container/Container.tsx";
+import {theme} from "src/styles/Theme.tsx";
 
 const iconsForContacts = [
     {id: "linkedin", href: "https://www.linkedin.com/in/eugene-udalykh/"},
@@ -16,11 +17,11 @@ export const Footer = () => {
                     <StyledName>
                         I'm Available For Freelance
                     </StyledName>
-                    <FlexWrapper justify={"center"} align={"center"} gap={"30px"}>
-                        {iconsForContacts.map((el, index) => <WrapperForIcon key={index} href={el.href}
-                                                                             target="_blank"><Icon
-                            iconId={el.id}/></WrapperForIcon>)}
-                    </FlexWrapper>
+                    <SocialList>
+                        {iconsForContacts.map((el, index) => <li key={index}><WrapperForIcon href={el.href}
+                                                                                             target="_blank"><Icon
+                            iconId={el.id}/></WrapperForIcon></li>)}
+                    </SocialList>
                     <StyledSpan>© 2023 Eugene Udalykh | All Rights Reserved.</StyledSpan>
                 </FlexWrapper>
             </Container>
@@ -29,7 +30,6 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-  min-height: max-content;
   //padding-top: 60px; // чтобы при скролле учитывало длину Header
 `
 
@@ -38,12 +38,16 @@ const StyledName = styled.h3`
   color: #FFF;
   font-family: Josefin Sans, sans-serif;
   font-size: 22px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 3px;
 `
 
+const SocialList = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+`
 const WrapperForIcon = styled.a`
   display: flex;
   justify-content: center;
@@ -51,12 +55,15 @@ const WrapperForIcon = styled.a`
   border-radius: 50px;
   height: 70px;
   width: 70px;
-  background-color: #242424;
+  background-color: ${theme.color.secondary};
   transition: .3s;
+  color: ${theme.color.accent};
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: .2s;
+    background-color: ${theme.color.accent};
+    color: ${theme.color.secondary};
   }
 
   &:active {
@@ -65,12 +72,9 @@ const WrapperForIcon = styled.a`
   }
 `
 const StyledSpan = styled.span`
-  color: rgb(189, 189, 189);
   text-align: center;
-  font-family: Poppins, sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  padding: 10px;
+  padding: 10px 0 20px;
+  opacity: 0.5;
 `

@@ -18,9 +18,9 @@ const StyledInput = styled.input`
   font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 40px;
-  border: 1px solid #4A4A4A;
+  border: 1px solid ${theme.color.primary};
   border-radius: 4px;
-  background: #252527;
+  background: ${theme.color.secondary};
   padding: 5px 10px;
   color: ${theme.color.font};
   transition: .3s;

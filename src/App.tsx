@@ -8,7 +8,7 @@ import {Footer} from "src/layout/footer/Footer.tsx";
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Header/>
             <Main/>
             <Skills/>
