@@ -7,10 +7,10 @@ type MenuPropsType = {
 export const MobileMenu = ({items}: MenuPropsType) => {
     return (
         <StyledNavigation>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-            <Popup isOpen={true}>
+            <Popup isOpen={false}>
                 <ul>
                     {items?.map((el, index) => <ListItem key={index}>
                         <Link href={`#${el}`}>
@@ -36,7 +36,7 @@ const StyledNavigation = styled.nav`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top: -100px;
+  top: -120px;
   right: -100px;
   width: 200px;
   height: 200px;
@@ -92,7 +92,7 @@ const Popup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(42, 42, 42, 0.9);
+  background-color: rgba(42, 42, 42, 0.90);
   z-index: 99999;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
