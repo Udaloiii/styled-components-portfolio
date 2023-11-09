@@ -4,6 +4,7 @@ import {Logo} from "src/components/logo/Logo.tsx";
 import {Container} from "src/components/container/Container.tsx";
 import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 import {MobileMenu} from "src/layout/header/mobileMenu/MobileMenu.tsx";
+import {theme} from "src/styles/Theme.tsx";
 
 const menuHeaderItems = ["Home", "Skills", "Works", "Contact"]
 export const Header = () => {
@@ -29,4 +30,5 @@ export const StyleHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: ${theme.color.accent};
 `
