@@ -1,16 +1,19 @@
 import styled, {css} from "styled-components";
 import {theme} from "src/styles/Theme.tsx";
+import {useState} from "react";
 
 type MenuPropsType = {
     items?: string[]
 }
 export const MobileMenu = ({items}: MenuPropsType) => {
+    const [open, setOpen] = useState<boolean>(false)
+    const onChangeOpen = () => setOpen(prevState => !prevState)
     return (
         <StyledNavigation>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={open} onClick={onChangeOpen}>
                 <span></span>
             </BurgerButton>
-            <Popup isOpen={false}>
+            <Popup isOpen={open} onClick={() => setOpen(false)}>
                 <ul>
                     {items?.map((el, index) => <ListItem key={index}>
                         <Link href={`#${el}`}>
@@ -50,6 +53,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     left: 40px;
     bottom: 50px;
+    transition: .2s;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: rgba(255, 255, 255, 0);
@@ -62,9 +66,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       height: 2px;
       background-color: ${theme.color.font};
       transform: translateY(-10px);
+      transition: .2s;
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0);
+        transition: .2s;
       `}
     }
 
@@ -77,10 +83,12 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       height: 2px;
       background-color: ${theme.color.font};
       transform: translateY(10px);
+      transition: .2s;
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         width: 36px;
         transform: rotate(45deg) translateY(0);
+        transition: .2s;
       `}
     }
   }
