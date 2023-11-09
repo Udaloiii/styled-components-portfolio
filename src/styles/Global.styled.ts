@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     background: url("https://img.freepik.com/free-vector/hand-drawn-doodle-icons-set_1308-90706.jpg?w=1380&t=st=1698763328~exp=1698763928~hmac=50bb66bc54ce3c8a2718a8ef194f981166e837fa2804e6f3ab42f32e426bb713") center repeat !important;
     color: ${theme.color.font};
     line-height: 1.2;
+    min-width: 360px;
   }
 
   a {
