@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Icon} from "src/components/icon/Icon.tsx";
+import {theme} from "src/styles/Theme.tsx";
 
 type SkillPropsType = {
     iconId: string
@@ -17,9 +18,10 @@ export const Skill = ({iconId, title, width, height, viewBox}: SkillPropsType) =
     )
 }
 const StyledSkill = styled.div`
-  margin: 15px 0;
-  padding: 10px;
-  width: 25%;
+  flex-grow: 1;
+  //margin: 15px 0 0;
+  padding: 10px 0;
+  width: 340px;
   height: 200px;
   border-radius: 10%;
   display: flex;
@@ -27,11 +29,18 @@ const StyledSkill = styled.div`
   align-items: center;
   gap: 20px;
   transition: .3s;
-
-  &:hover {
-    transform: scale(1.1);
+  
+  @media ${theme.media.mobile} {
+    width: 400px;
+  }
+  
+  svg {
     transition: .3s;
-    box-shadow: 0 0 15px 7px rgba(178, 178, 178, 0.5);
+  }
+  svg:hover {
+    transform: scale(1.2);
+    transition: .3s;
+    //box-shadow: 0 0 15px 7px rgba(178, 178, 178, 0.5);
   }
 `
 const StyledTitle = styled.h3`
