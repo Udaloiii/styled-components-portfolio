@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Button} from "src/components/button/Button.tsx";
 import {Link} from "src/components/link/Link.tsx";
+import {theme} from "src/styles/Theme.tsx";
 
 type ProjectPropsType = {
     title: string
@@ -38,7 +39,6 @@ const StyledProject = styled.div`
   border-radius: 14px;
   width: 40%;
   background-color: azure;
-  //transition: .3s;
   padding: 0 0 20px;
 
   &:hover {
@@ -52,7 +52,7 @@ const StyledProject = styled.div`
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media ${theme.media.mobile} {
     width: 80%;
     padding: 0 0 15px;
 
@@ -79,7 +79,16 @@ const ImageWrapper = styled.div`
   position: relative;
   transition: 0s;
 
+  ${Button} {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   &::before {
+    opacity: 0;
     content: "";
     position: absolute;
     display: inline-block;
@@ -89,19 +98,11 @@ const ImageWrapper = styled.div`
     bottom: 0;
     background: rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(4px);
-    opacity: 0;
     border-top-right-radius: 14px;
     border-top-left-radius: 14px;
     transition: 0s;
   }
 
-  ${Button} {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-  }
 
   &:hover {
     &::before {
@@ -118,6 +119,16 @@ const ImageWrapper = styled.div`
       }
     }
   }
+
+  @media ${theme.media.tablet} {
+    &::before {
+      opacity: 1;
+    }
+
+    ${Button} {
+      opacity: 1;
+    }
+  }
 `
 const StyledImg = styled.img`
   width: 100%;
@@ -127,7 +138,7 @@ const StyledImg = styled.img`
   border-top-left-radius: 14px;
 
 
-  @media screen and (max-width: 768px) {
+  @media ${theme.media.tablet} {
     height: 150px;
   }
 `

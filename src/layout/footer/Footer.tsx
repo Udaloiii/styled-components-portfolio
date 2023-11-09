@@ -3,6 +3,7 @@ import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 import {Icon} from "src/components/icon/Icon.tsx";
 import {Container} from "src/components/container/Container.tsx";
 import {theme} from "src/styles/Theme.tsx";
+import {font} from "src/styles/Common.ts";
 
 const iconsForContacts = [
     {id: "linkedin", href: "https://www.linkedin.com/in/eugene-udalykh/"},
@@ -18,9 +19,9 @@ export const Footer = () => {
                         I'm Available For Freelance
                     </StyledName>
                     <SocialList>
-                        {iconsForContacts.map((el, index) => <li key={index}><WrapperForIcon href={el.href}
-                                                                                             target="_blank"><Icon
-                            iconId={el.id}/></WrapperForIcon></li>)}
+                        {iconsForContacts.map((el, index) => <li key={index}><Link href={el.href}
+                                                                                   target="_blank"><Icon
+                            iconId={el.id}/></Link></li>)}
                     </SocialList>
                     <StyledSpan>© 2023 Eugene Udalykh | All Rights Reserved.</StyledSpan>
                 </FlexWrapper>
@@ -35,20 +36,24 @@ const StyledFooter = styled.footer`
 
 const StyledName = styled.h3`
   padding: 20px;
-  color: #FFF;
-  font-family: Josefin Sans, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
   letter-spacing: 3px;
+  ${font({family: "'Josefin Sans', sans-serif",weight:700, Fmax: 28, Fmin: 18})}
 `
 
 const SocialList = styled.ul`
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 30px;
+
+  @media ${theme.media.mobile} {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 350px) {
+    gap: 15px;
+  }
 `
-const WrapperForIcon = styled.a`
+
+const Link = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +74,16 @@ const WrapperForIcon = styled.a`
   &:active {
     transform: scale(0.95);
     transition: .2s;
+  }
+
+  @media ${theme.media.mobile} {
+    height: 65px;
+    width: 65px;
+  }
+
+  @media screen and (max-width: 350px) {
+    height: 60px;
+    width: 60px;
   }
 `
 const StyledSpan = styled.span`

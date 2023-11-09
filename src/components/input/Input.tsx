@@ -30,4 +30,8 @@ const StyledInput = styled.input`
     transition: .3s;
     transform: scale(1.02);
   }
+
+  @media ${theme.media.mobile} {
+    padding: 3px 7px;
+  }
 `

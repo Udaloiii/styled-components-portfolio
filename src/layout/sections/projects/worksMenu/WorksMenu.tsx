@@ -29,29 +29,9 @@ const StyledNavigation = styled.nav`
     gap: 40px;
   }
 
-  // & a {
-    //   color: ${theme.color.font};
-  //   font-size: 14px;
-  //   font-weight: 400;
-  //   letter-spacing: 1px;
-  //   text-transform: uppercase;
-  //   transition: .3s;
-  //
-  //   &:hover {
-  //     color: #0654e0;
-  //     transition: .3s;
-  //   }
-  //
-  //   &:active {
-  //     color: #0041ab;
-  //     transition: .1s;
-  //     text-shadow: 2px 2px 2px rgb(255, 255, 255);
-  //   }
-  // }
-
-  @media screen and (max-width: 768px) {
+  @media ${theme.media.tablet} {
     & ul {
-      padding: 0 20px;
+      padding: 0 20px 15px;
     }
 
     & a {
@@ -59,9 +39,10 @@ const StyledNavigation = styled.nav`
     }
   }
 
-  @media screen and (max-width: 576px) {
+  @media  ${theme.media.mobile} {
     & ul {
       margin: 0;
+      white-space: nowrap;
     }
 
     & a {
@@ -71,8 +52,7 @@ const StyledNavigation = styled.nav`
 
   @media screen and (max-width: 320px) {
     & ul {
-      padding: 0 9px;
-      gap: 9px;
+      gap: 8px;
     }
 
     & a {
@@ -80,42 +60,3 @@ const StyledNavigation = styled.nav`
     }
   }
 `
-
-// const Link =styled.a`
-//   position: relative;
-//   color: ${theme.color.font};
-//   font-size: 14px;
-//   font-weight: 400;
-//   letter-spacing: 1px;
-//   text-transform: uppercase;
-//   transition: .3s;
-//   z-index: 0;
-//
-//   &::before {
-//     position: absolute;
-//     content: "";
-//     display: inline-block;
-//     width: 0;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     height: 7px;
-//     bottom: -5px;
-//     background-color: ${theme.color.accent};
-//     z-index: -1;
-//   }
-//
-//   &:hover {
-//     transition: .3s;
-//
-//     &::before {
-//       width: 100%;
-//       transition: .2s ease-in-out;
-//     }
-//   }
-//
-//   &:active {
-//     color: #0041ab;
-//     transition: .1s;
-//     text-shadow: 2px 2px 2px rgb(255, 255, 255);
-//   }
-// `

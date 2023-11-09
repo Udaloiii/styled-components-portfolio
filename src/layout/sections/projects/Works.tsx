@@ -31,14 +31,4 @@ export const Works = () => {
 const StyledProjects = styled.section`
   min-height: 100vh;
   padding-top: 60px; // чтобы при скролле учитывало длину Header
-  
-
-  
-  ${FlexWrapper} + ${FlexWrapper} {
-    @media  screen and (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 `
