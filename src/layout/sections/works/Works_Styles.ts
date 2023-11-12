@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "src/styles/Theme.tsx";
 import {Button} from "src/components/button/Button.tsx";
-import {Link} from "src/components/link/Link";
+import {Link} from "src/components/link/Link.ts";
 
 const Works = styled.section`
   min-height: 100vh;

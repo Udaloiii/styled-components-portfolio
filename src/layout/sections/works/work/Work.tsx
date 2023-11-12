@@ -1,5 +1,5 @@
 import {Button} from "src/components/button/Button.tsx";
-import {Link} from "src/components/link/Link.tsx";
+import {Link} from "src/components/link/Link.ts";
 import {S} from '../Works_Styles.ts'
 import {FC} from "react";
 
