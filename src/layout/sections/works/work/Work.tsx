@@ -1,15 +1,16 @@
 import {Button} from "src/components/button/Button.tsx";
 import {Link} from "src/components/link/Link.tsx";
 import {S} from '../Works_Styles.ts'
+import {FC} from "react";
 
-type ProjectPropsType = {
+type WorkPropsType = {
     title: string
     text?: string
     linkDemo?: string
     linkCode?: string
     logo?: string
 }
-export const Work = ({title, logo, linkDemo, linkCode}: ProjectPropsType) => {
+export const Work: FC<WorkPropsType> = ({title, logo, linkDemo, linkCode}: WorkPropsType) => {
     return (
         <S.Work>
             <S.ImageWrapper>
@@ -21,14 +22,12 @@ export const Work = ({title, logo, linkDemo, linkCode}: ProjectPropsType) => {
             </S.WorkTitle>
             <S.LinkWrapper>
                 <Link href={linkDemo} target={"_blank"} color={"black"}>
-                Demo
-            </Link>
+                    Demo
+                </Link>
                 <Link href={linkCode} target={"_blank"} color={"black"}>
                     Code
                 </Link>
             </S.LinkWrapper>
         </S.Work>
-
-
     )
 }
