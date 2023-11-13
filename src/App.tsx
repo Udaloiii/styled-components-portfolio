@@ -4,11 +4,13 @@ import {Skills} from "src/layout/sections/skills/Skills.tsx";
 import {Works} from "src/layout/sections/works/Works.tsx";
 import {Contacts} from "src/layout/sections/contacts/Contacts.tsx";
 import {Footer} from "src/layout/footer/Footer.tsx";
+import {Particle} from "src/components/particle/Particle.tsx";
 
 
 function App() {
     return (
         <div>
+            <Particle/>
             <Header/>
             <Main/>
             <Skills/>

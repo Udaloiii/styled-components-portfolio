@@ -34,9 +34,9 @@ const WrapperForImg = styled.div`
 
 `
 const Img = styled.img`
-  background: rgba(215, 215, 215, 0.95);
-  box-shadow: 0 0 8px 5px rgba(232, 232, 232, 0.8);
-  border-radius: 10px;
+  background: rgb(44, 44, 44);
+  box-shadow: inset 0 0 6px 1px rgba(232, 232, 232, 0.8);
+  filter: drop-shadow(0px 0px 10px ${theme.color.accent});
   width: 350px;
   height: 430px;
   object-fit: cover;
