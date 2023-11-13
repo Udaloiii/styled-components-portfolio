@@ -50,6 +50,10 @@ const Img = styled.img`
 const MainTitle = styled.h1`
   ${font({Fmin: 20, Fmax: 27, weight: 400})}
   display: flex;
+  
+  p {
+    display: none; // для поискового робота
+  }
 `
 const Name = styled.h2`
   ${font({family: "'Josefin Sans', sans-serif", Fmax: 50, Fmin: 36, weight: 700})};
