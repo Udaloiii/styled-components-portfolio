@@ -3,6 +3,7 @@ import {Title} from "src/components/title/Title.tsx";
 import {FlexWrapper} from "src/components/FlexWrapper.tsx";
 import {Container} from "src/components/container/Container.tsx";
 import {S} from './Skills_Styles.ts'
+import {Fade} from "react-awesome-reveal";
 
 type SkillType = {
     id: string
@@ -29,9 +30,12 @@ export const Skills = () => {
             <Container>
                 <Title>My skills</Title>
                 <FlexWrapper gap={"15px"} wrap={"wrap"} justify={"space-between"}>
-                    {arrOfSkills.map(el => <Skill key={el.id} iconId={el.id} title={el.title} viewBox={el.viewBox || ""}
-                                                  height={el.height || ""}
-                                                  width={el.width || ""}/>)}
+                    <Fade cascade fraction={0.5} duration={500}>
+                        {arrOfSkills.map(el => <Skill key={el.id} iconId={el.id} title={el.title}
+                                                      viewBox={el.viewBox || ""}
+                                                      height={el.height || ""}
+                                                      width={el.width || ""}/>)}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </S.Skills>
