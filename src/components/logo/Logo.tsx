@@ -4,11 +4,8 @@ import styled from "styled-components";
 import {animateScroll as scroll} from "react-scroll/modules";
 
 export const Logo = () => {
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
     return (
-        <Link href={"#"} onClick={scrollToTop}>
+        <Link href={"#"} onClick={()=> scroll.scrollToTop()}>
             <Icon iconId={"logoSvg"} viewBox={"0 0 512 512"}/>
         </Link>
     )

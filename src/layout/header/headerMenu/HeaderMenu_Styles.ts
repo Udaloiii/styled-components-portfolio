@@ -39,6 +39,7 @@ const Mask = styled.span`
 
 const MenuItem = styled.li`
   position: relative;
+  user-select: none;
 
   &::before {
     content: "";
