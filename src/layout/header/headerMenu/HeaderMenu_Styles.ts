@@ -136,7 +136,6 @@ const BurgerButton = styled.button<{ open: boolean }>`
   }
 `
 const Popup = styled.div<{ open: boolean }>`
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -144,21 +143,32 @@ const Popup = styled.div<{ open: boolean }>`
   bottom: 0;
   background-color: rgba(42, 42, 42, 0.90);
   z-index: 99999;
-
-  ${props => props.open && css<{ open: boolean }>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: .8s ease-in-out;
+  
   ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 120px;
     color: ${theme.color.accent};
     letter-spacing: 4px;
+    transition: 1s;
   }
+  
+  ${props => props.open && css<{ open: boolean }>`
+    transform: translateY(0);
+    transition: .8s ease-in-out;
+    
+    ul {
+      gap: 15px;
+      transition: 1.2s;
+    }
+  `}
 `
 
 // desktop menu
