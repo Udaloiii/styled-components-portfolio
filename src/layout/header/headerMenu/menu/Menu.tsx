@@ -3,16 +3,17 @@ import {S} from '../HeaderMenu_Styles.ts'
 
 type MenuPropsType = {
     items?: string[]
+    setOpen?: (value: boolean) => void
 }
-export const Menu: FC<MenuPropsType> = ({items}: MenuPropsType) => {
+export const Menu: FC<MenuPropsType> = ({items, setOpen}: MenuPropsType) => {
     return (
         <ul>
             {items?.map((el, index) => <S.MenuItem key={index}>
-                <S.Link href={`#${el}`}>
+                <S.NavLink to={el} smooth spy onClick={() => setOpen && setOpen(false)}>
                     {el}
                     <S.Mask><span>{el}</span></S.Mask>
                     <S.Mask><span>{el}</span></S.Mask>
-                </S.Link>
+                </S.NavLink>
             </S.MenuItem>)}
         </ul>
     )

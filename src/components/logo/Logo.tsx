@@ -1,10 +1,14 @@
 import {Icon} from "src/components/icon/Icon.tsx";
 import {theme} from "src/styles/Theme.tsx";
 import styled from "styled-components";
+import {animateScroll as scroll} from "react-scroll/modules";
 
 export const Logo = () => {
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
     return (
-        <Link href={"#"}>
+        <Link href={"#"} onClick={scrollToTop}>
             <Icon iconId={"logoSvg"} viewBox={"0 0 512 512"}/>
         </Link>
     )
