@@ -26,10 +26,6 @@ const Skill = styled.div`
   gap: 20px;
   transition: .3s;
   
-  @media ${theme.media.mobile} {
-    width: 400px;
-  }
-  
   svg {
     color: ${theme.color.accent};
     transition: .3s;

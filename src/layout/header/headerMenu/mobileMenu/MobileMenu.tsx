@@ -10,11 +10,11 @@ export const MobileMenu: FC<MenuPropsType> = ({items}: MenuPropsType) => {
     const onChangeOpen = () => setOpen(prevState => !prevState)
     return (
         <S.MobileNavigation>
-            <S.BurgerButton isOpen={open} onClick={onChangeOpen}>
+            <S.BurgerButton open={open} onClick={onChangeOpen}>
                 <span></span>
             </S.BurgerButton>
-            <S.Popup isOpen={open} onClick={() => setOpen(false)}>
-                <Menu items={items}/>
+            <S.Popup open={open} onClick={() => setOpen(false)}>
+                <Menu items={items} setOpen={setOpen}/>
             </S.Popup>
         </S.MobileNavigation>
     )

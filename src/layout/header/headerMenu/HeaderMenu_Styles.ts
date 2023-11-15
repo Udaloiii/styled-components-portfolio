@@ -1,11 +1,13 @@
 import {theme} from "src/styles/Theme.tsx";
 import styled, {css} from "styled-components";
+import {Link} from "react-scroll";
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   color: transparent;
   transition: .3s;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
+  cursor: pointer;
 
 
   &:active {
@@ -76,7 +78,7 @@ const MenuItem = styled.li`
 const MobileNavigation = styled.nav`
 `
 
-const BurgerButton = styled.button<{ isOpen: boolean }>`
+const BurgerButton = styled.button<{ open: boolean }>`
   position: fixed;
   top: -120px;
   right: -100px;
@@ -94,7 +96,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     bottom: 50px;
     transition: .2s;
 
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
+    ${props => props.open && css<{ open: boolean }>`
       background-color: rgba(255, 255, 255, 0);
     `}
     &::before {
@@ -107,7 +109,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(-10px);
       transition: .2s;
 
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
+      ${props => props.open && css<{ open: boolean }>`
         transform: rotate(-45deg) translateY(0);
         transition: .2s;
       `}
@@ -124,7 +126,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(10px);
       transition: .2s;
 
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
+      ${props => props.open && css<{ open: boolean }>`
         width: 36px;
         transform: rotate(45deg) translateY(0);
         transition: .2s;
@@ -132,7 +134,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
   }
 `
-const Popup = styled.div<{ isOpen: boolean }>`
+const Popup = styled.div<{ open: boolean }>`
   display: none;
   position: fixed;
   top: 0;
@@ -142,7 +144,7 @@ const Popup = styled.div<{ isOpen: boolean }>`
   background-color: rgba(42, 42, 42, 0.90);
   z-index: 99999;
 
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
+  ${props => props.open && css<{ open: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +182,7 @@ const DesktopNavigation = styled.nav`
 `
 
 export const S = {
-    Link,
+    NavLink,
     MenuItem,
     Mask,
     BurgerButton,
