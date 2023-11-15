@@ -5,6 +5,7 @@ import {Works} from "src/layout/sections/works/Works.tsx";
 import {Contacts} from "src/layout/sections/contacts/Contacts.tsx";
 import {Footer} from "src/layout/footer/Footer.tsx";
 import {Particle} from "src/components/particle/Particle.tsx";
+import {GoTop} from "src/components/goTop/GoTop.tsx";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Works/>
             <Contacts/>
             <Footer/>
+            <GoTop/>
         </div>
     );
 }
