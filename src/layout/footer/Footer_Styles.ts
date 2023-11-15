@@ -38,7 +38,7 @@ const Link = styled.a`
 
   &:hover {
     transform: scale(1.2);
-    transition: .2s;
+    transition: .3s;
     background-color: ${theme.color.accent};
     color: ${theme.color.secondary};
   }

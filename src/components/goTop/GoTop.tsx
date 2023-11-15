@@ -2,21 +2,24 @@ import styled from "styled-components";
 import {Icon} from "src/components/icon/Icon.tsx";
 import {theme} from "src/styles/Theme.tsx";
 import {animateScroll as scroll} from "react-scroll/modules";
-import {useEffect, useState} from "react";
+import {FC, useEffect, useState} from "react";
 
 
-export const GoTop = () => {
+export const GoTop: FC = () => {
     const [show, setShow] = useState(false)
     useEffect(() => {
         window.addEventListener("scroll", () => {
             window.scrollY > 200 ? setShow(true) : setShow(false)
         })
-    }, []);
+    }, [])
+
     return (
-        show &&
-        <Button onClick={() => scroll.scrollToTop()}>
-            <Icon iconId={"top"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
-        </Button>
+        <>
+            {show && <Button onClick={() => scroll.scrollToTop()}>
+                <Icon iconId={"top"} width={"30"} height={"30"} viewBox={"0 0 30 30"}/>
+            </Button>}
+        </>
+
     )
 }
 const Button = styled.button`

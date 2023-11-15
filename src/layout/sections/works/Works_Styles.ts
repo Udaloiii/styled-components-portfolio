@@ -60,6 +60,7 @@ const Work = styled.div`
   width: 40%;
   background-color: azure;
   padding: 0 0 20px;
+  transition: .3s;
 
   &:hover {
     transform: scale(1.05);
@@ -97,8 +98,7 @@ const WorkTitle = styled.h3`
 `
 const ImageWrapper = styled.div`
   position: relative;
-  transition: 0s;
-
+  transition: .3s;
   ${Button} {
     opacity: 0;
     position: absolute;
@@ -117,17 +117,17 @@ const ImageWrapper = styled.div`
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.30);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     border-top-right-radius: 14px;
     border-top-left-radius: 14px;
-    transition: 0s;
+    transition: .3s;
   }
 
 
   &:hover {
     &::before {
       opacity: 1;
-      transition: 0s;
+      transition: .3s;
     }
 
     ${Button} {
