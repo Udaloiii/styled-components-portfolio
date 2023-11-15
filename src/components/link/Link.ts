@@ -3,8 +3,9 @@ import {theme} from "src/styles/Theme.tsx";
 
 type LinkPropsType = {
     color?: string
-    active?: boolean
+    $isOpen: boolean // $ впереди чтобы не ругалось в консоли "React does not recognize the <> prop on a DOM element. If you intentionally..."
 }
+
 export const Link = styled.a<LinkPropsType>`
   position: relative;
   color: ${props => props.color || theme.color.font};
@@ -34,7 +35,7 @@ export const Link = styled.a<LinkPropsType>`
     z-index: -1;
     transition: .1s ease-in-out;
 
-    ${props => props.active && css<{ active?: boolean }>`
+    ${props => props.$isOpen && css<{ $isOpen: boolean }>`
       height: 7px;
       width: 100%;
       transition: .2s ease-in-out;

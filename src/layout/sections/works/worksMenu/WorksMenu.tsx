@@ -11,9 +11,11 @@ export const WorksMenu = ({items, currentFilter, setCurrentFilter}: MenuPropsTyp
     return (
         <S.WorksNavigation>
             <ul>
-                {items?.map((el, index) => <li key={index}><Link active={currentFilter === el}
-                                                                 onClick={() => setCurrentFilter(el)}
-                                                                 href={`#${el}`}>{el}</Link></li>)}
+                {items?.map((el, index) => <li key={index}>
+                    <Link
+                    $isOpen={currentFilter === el}
+                    onClick={() => setCurrentFilter(el)}
+                    href={`#${el}`}>{el}</Link></li>)}
             </ul>
         </S.WorksNavigation>
     )
