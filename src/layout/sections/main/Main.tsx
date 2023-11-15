@@ -32,10 +32,13 @@ export const Main: FC = () => {
                         tiltMaxAngleY={40}
                         perspective={800}
                         transitionSpeed={1500}
-                        scale={1.1}
+                        // scale={1.1} // убрал чтобы не сдвигалось в бок
                         gyroscope={true}>
-                        <S.WrapperForImg><S.Img src={avatar}
-                                                alt="Eugene Udalykh"/></S.WrapperForImg></Tilt>
+                        <S.WrapperForImg>
+                            <S.Img src={avatar}
+                                   alt="Eugene Udalykh"/>
+                        </S.WrapperForImg>
+                    </Tilt>
                 </FlexWrapper>
             </Container>
         </S.Main>

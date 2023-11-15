@@ -12,6 +12,10 @@ const Main = styled.section`
 const WrapperForImg = styled.div`
   position: relative;
   z-index: 0;
+  
+  @media ${theme.media.mobile} {
+    margin: 50px 0 0;
+  }
 
   &::before {
     content: "";
@@ -25,7 +29,8 @@ const WrapperForImg = styled.div`
     z-index: -1;
 
     @media ${theme.media.mobile} {
-      width: 314px;
+      //width: 314px;
+      width: 304px;
       height: 414px;
       top: -20px;
       right: -21px;
@@ -42,7 +47,8 @@ const Img = styled.img`
   object-fit: cover;
 
   @media ${theme.media.mobile} {
-    width: 310px;
+    //width: 310px;
+    width: 300px;  // чтобы не сильно сдвигалось в бок
     height: 380px;
   }
 `
