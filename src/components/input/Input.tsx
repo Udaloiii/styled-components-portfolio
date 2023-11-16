@@ -2,14 +2,14 @@ import styled from "styled-components";
 import {theme} from "src/styles/Theme.tsx";
 
 type InputPropsType = {
-    name:string
-
+    name: string
+    placeholder?: string
+    type: "text" | "email"
+    autoComplete?: string
 }
-export const Input = ({name}:InputPropsType) => {
+export const Input = ({name, placeholder, type, autoComplete}: InputPropsType) => {
     return (
-        <StyledInput placeholder={name}>
-
-        </StyledInput>
+        <StyledInput required autoComplete={autoComplete} type={type} name={name} placeholder={placeholder}/>
     )
 }
 
