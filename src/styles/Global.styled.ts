@@ -48,4 +48,19 @@ export const GlobalStyle = createGlobalStyle`
       padding: 80px 0;
     }
   }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: ${theme.color.font};
+    -webkit-box-shadow: 0 0 0 1000px ${theme.color.secondary} inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: ${theme.color.font};
+  }
 `
