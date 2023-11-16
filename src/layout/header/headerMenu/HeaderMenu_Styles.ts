@@ -147,7 +147,7 @@ const Popup = styled.div<{ open: boolean }>`
   justify-content: center;
   align-items: center;
   transform: translateY(-100%);
-  transition: .8s ease-in-out;
+  transition: .5s ease-in-out;
   
   ul {
     display: flex;
@@ -157,16 +157,16 @@ const Popup = styled.div<{ open: boolean }>`
     gap: 120px;
     color: ${theme.color.accent};
     letter-spacing: 4px;
-    transition: 1s;
+    transition: .5s;
   }
   
   ${props => props.open && css<{ open: boolean }>`
     transform: translateY(0);
-    transition: .8s ease-in-out;
+    transition: .7s ease-in-out;
     
     ul {
       gap: 15px;
-      transition: 1.2s;
+      transition: 1s;
     }
   `}
 `
