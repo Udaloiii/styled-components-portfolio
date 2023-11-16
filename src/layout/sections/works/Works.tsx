@@ -5,6 +5,7 @@ import {WorksMenu} from "src/layout/sections/works/worksMenu/WorksMenu.tsx";
 import {Container} from "src/components/container/Container.tsx";
 import {FC, useState} from "react";
 import {S} from './Works_Styles.ts'
+import {AnimatePresence, motion} from "framer-motion";
 
 type ProjectType = {
     id: number
@@ -42,7 +43,7 @@ const arrOfProjects: ProjectType[] = [
     },
 
 ]
-const menuWorksItems:StatusType[] = ["all", "landing", "react", "spa"]
+const menuWorksItems: StatusType[] = ["all", "landing", "react", "spa"]
 
 export const Works: FC = () => {
     const [currentFilter, setCurrentFilter] = useState<StatusType>("all")
@@ -61,13 +62,28 @@ export const Works: FC = () => {
             <Container>
                 <Title>My works</Title>
                 <FlexWrapper justify={"center"}>
-                    <WorksMenu items={menuWorksItems} setCurrentFilter={setCurrentFilter} currentFilter={currentFilter}/>
+                    <WorksMenu items={menuWorksItems} setCurrentFilter={setCurrentFilter}
+                               currentFilter={currentFilter}/>
                 </FlexWrapper>
-                <FlexWrapper justify={"space-around"} wrap={"wrap"}>
-                    {filteredWorks.map(el => {
-                        return <Work key={el.id} title={el.title} text={el.text} logo={el.logo} linkDemo={el.linkDemo}
-                                     linkCode={el.linkCode}/>
-                    })}
+                <FlexWrapper justify={"space-around"} wrap={"wrap"} gap={"30px"}>
+                    <AnimatePresence>
+                        {filteredWorks.map(el => {
+                            return <motion.div key={el.id}
+                                               style={{
+                                                   width: "350px",
+                                                   flexGrow: 1,
+                                                   maxWidth: "540px",
+                                               }}
+                                               layout
+                                               initial={{opacity: 0}}
+                                               animate={{opacity: 1}}
+                                               exit={{opacity: 0}}>
+                                <Work title={el.title} text={el.text} logo={el.logo}
+                                      linkDemo={el.linkDemo}
+                                      linkCode={el.linkCode}/>
+                            </motion.div>
+                        })}
+                    </AnimatePresence>
                 </FlexWrapper>
             </Container>
         </S.Works>

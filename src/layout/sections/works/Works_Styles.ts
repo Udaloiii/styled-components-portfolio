@@ -57,24 +57,24 @@ const WorksNavigation = styled.nav`
 const Work = styled.div`
   position: relative;
   border-radius: 14px;
-  width: 40%;
   background-color: azure;
   padding: 0 0 20px;
   transition: .3s;
+
+
+    // ${Link} {
+  //   padding: 10px 0;
+    //   & + ${Link} {
+  //     margin-left: 20px;
+  //   }
+  // }
 
   &:hover {
     transform: scale(1.05);
     transition: .2s;
   }
 
-  & + & + & {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
-
   @media ${theme.media.mobile} {
-    width: 80%;
     padding: 0 0 15px;
 
     & + & {
@@ -99,6 +99,7 @@ const WorkTitle = styled.h3`
 const ImageWrapper = styled.div`
   position: relative;
   transition: .3s;
+
   ${Button} {
     opacity: 0;
     position: absolute;
