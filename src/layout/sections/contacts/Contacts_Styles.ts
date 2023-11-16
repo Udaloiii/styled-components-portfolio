@@ -1,9 +1,15 @@
 import {theme} from "src/styles/Theme.tsx";
 import styled from "styled-components";
+import {motion} from "framer-motion";
+import {Container} from "src/components/container/Container.tsx";
 
 const Contacts = styled.section`
   //padding-top: 60px; // чтобы при скролле учитывало длину Header
   margin-bottom: 50px;
+
+  ${Container} {
+    position: relative;
+  }
 `
 const ContactsForm = styled.form`
   margin: 0 auto;
@@ -39,8 +45,24 @@ const ContactsTextArea = styled.textarea`
     padding: 3px 7px;
   }
 `
+const SendInfo = styled(motion.div)`
+  position: fixed;
+  bottom: 80px;
+  left: -50%;
+  right: -50%;
+  width: max-content;
+  border: 1px solid ${theme.color.accent};
+  background-color: ${theme.color.secondary};
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  padding: 20px;
+  margin: 0 auto;
+  user-select: none;
+  z-index: 9;
+`
 export const S = {
     Contacts,
     ContactsForm,
-    ContactsTextArea
+    ContactsTextArea,
+    SendInfo
 }
