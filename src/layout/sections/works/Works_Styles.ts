@@ -4,7 +4,7 @@ import {Button} from "src/components/button/Button.tsx";
 import {Link} from "src/components/link/Link.ts";
 
 const Works = styled.section`
-  min-height: 100vh;
+  //min-height: 100vh;
   padding-top: 60px; // чтобы при скролле учитывало длину Header
 `
 

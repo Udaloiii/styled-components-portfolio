@@ -7,9 +7,13 @@ const Footer = styled.footer`
 `
 
 const FooterName = styled.h3`
-  padding: 20px;
+  //padding: 20px;
   letter-spacing: 3px;
   ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 28, Fmin: 18})}
+
+  @media ${theme.media.mobile} {
+  padding: 80px;
+}
 `
 
 const SocialList = styled.ul`
@@ -30,8 +34,8 @@ const Link = styled.a`
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  height: 70px;
-  width: 70px;
+  height: 65px;
+  width: 65px;
   background-color: ${theme.color.secondary};
   transition: .3s;
   color: ${theme.color.accent};
@@ -62,7 +66,8 @@ const Text = styled.span`
   text-align: center;
   font-size: 12px;
   font-weight: 400;
-  padding: 10px 0 20px;
+  //padding: 10px 0 20px;
+  padding: 0 0 10px;
   opacity: 0.5;
 `
 export const S = {

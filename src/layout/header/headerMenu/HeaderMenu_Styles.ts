@@ -154,7 +154,7 @@ const Popup = styled.div<{ open: boolean }>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 120px;
+    gap: 150px;
     color: ${theme.color.accent};
     letter-spacing: 4px;
     transition: .5s;
@@ -165,7 +165,7 @@ const Popup = styled.div<{ open: boolean }>`
     transition: .7s ease-in-out;
     
     ul {
-      gap: 15px;
+      gap: 30px;
       transition: 1s;
     }
   `}

@@ -2,13 +2,23 @@ import {theme} from "src/styles/Theme.tsx";
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import {Container} from "src/components/container/Container.tsx";
+import {Title} from "src/components/title/Title.tsx";
 
 const Contacts = styled.section`
   //padding-top: 60px; // чтобы при скролле учитывало длину Header
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
+  ${Title} {
+    padding: 0;
+  }
 
   ${Container} {
     position: relative;
+  }
+
+  @media ${theme.media.mobile} {
+    ${Title} {
+      padding: 0 0 20px;
+    }
   }
 `
 const ContactsForm = styled.form`
@@ -18,8 +28,12 @@ const ContactsForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 0 0 20px;
+
+  @media ${theme.media.mobile} {
+    gap: 20px;
+  }
 `
 
 const ContactsTextArea = styled.textarea`

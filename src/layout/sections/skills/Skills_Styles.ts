@@ -8,6 +8,7 @@ const Skills = styled.section`
   padding-top: 60px; // чтобы при скролле учитывало длину Header
   @media ${theme.media.mobile} {
     ${FlexWrapper} {
+      justify-content: center;
       gap: 35px; 
     }
   }
