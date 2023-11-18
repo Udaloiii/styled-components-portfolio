@@ -38,8 +38,8 @@ const Button = styled.button`
   & svg {
     background-color: transparent;
     border-radius: 6px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     transition: .2s;
 
     &:active {

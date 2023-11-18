@@ -20,7 +20,7 @@ export const Header: FC = () => {
 
     return (
         <S.Header>
-            <Container>
+            <Container style={{boxShadow: `0 0 8px 5px rgba(117, 114, 213, 0.5)`,  backgroundColor: "#111111FF"}}>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
                     {width < breakpoint ? <MobileMenu items={menuHeaderItems}/> :

@@ -29,7 +29,7 @@ export const Skills = () => {
         <S.Skills id="Skills">
             <Container>
                 <Title>My skills</Title>
-                <FlexWrapper gap={"15px"} wrap={"wrap"} justify={"space-between"}>
+                <FlexWrapper gap={"15px"} wrap={"wrap"} justify={"space-between"} align={"center"}>
                     <Fade cascade fraction={0.5} duration={500}>
                         {arrOfSkills.map(el => <Skill key={el.id} iconId={el.id} title={el.title}
                                                       viewBox={el.viewBox || ""}
