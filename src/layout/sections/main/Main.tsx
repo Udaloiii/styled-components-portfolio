@@ -28,10 +28,10 @@ export const Main: FC = () => {
                             /></S.MainTitle>
                     </div>
                     <Tilt
-                        tiltMaxAngleX={40}
-                        tiltMaxAngleY={40}
+                        tiltMaxAngleX={20}
+                        tiltMaxAngleY={20}
                         perspective={800}
-                        transitionSpeed={1500}
+                        transitionSpeed={3000}
                         // scale={1.1} // убрал чтобы не сдвигалось в бок
                         gyroscope={true}>
                         <S.WrapperForImg>
