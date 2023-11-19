@@ -22,11 +22,13 @@ const WrapperForImg = styled.div`
     content: "";
     position: absolute;
     display: inline-block;
-    top: -24px;
+    //top: -24px;
+    top: -35px;
     right: -34px;
     width: 360px;
     height: 470px;
     border: 5px solid ${theme.color.accent};
+    border-left: none;
     z-index: -1;
 
     @media ${theme.media.mobile} {
@@ -40,12 +42,14 @@ const WrapperForImg = styled.div`
 
 `
 const Img = styled.img`
-  background: rgb(44, 44, 44);
-  box-shadow: inset 0 0 6px 1px rgba(232, 232, 232, 0.8);
-  filter: drop-shadow(0px 0px 10px ${theme.color.accent});
+  //background: rgb(44, 44, 44);
+    //box-shadow: inset 0 0 6px 1px ${theme.color.accent};
+  border-left: 5px solid ${theme.color.accent};
+  filter: drop-shadow(0 0 100px ${theme.color.accent});
   width: 350px;
   height: 430px;
   object-fit: cover;
+  pointer-events: none;
 
   @media ${theme.media.mobile} {
     //width: 310px;
