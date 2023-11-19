@@ -28,12 +28,13 @@ export const Main: FC = () => {
                             /></S.MainTitle>
                     </div>
                     <Tilt
-                        tiltMaxAngleX={20}
-                        tiltMaxAngleY={20}
+                        tiltMaxAngleX={10}
+                        tiltMaxAngleY={30}
                         perspective={800}
                         transitionSpeed={3000}
                         // scale={1.1} // убрал чтобы не сдвигалось в бок
-                        gyroscope={true}>
+                        // gyroscope={true}
+                    >
                         <S.WrapperForImg>
                             <S.Img src={avatar}
                                    alt="Eugene Udalykh"/>
