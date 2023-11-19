@@ -48,4 +48,13 @@ const Button = styled.button`
       transition: .2s;
     }
   }
+
+  @media ${theme.media.mobile} {
+    bottom: 20px;
+    right: 15px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
 `
