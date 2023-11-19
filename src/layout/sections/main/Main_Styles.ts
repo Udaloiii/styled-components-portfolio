@@ -12,6 +12,7 @@ const Main = styled.section`
 const WrapperForImg = styled.div`
   position: relative;
   z-index: 0;
+  user-select: none;
   
   @media ${theme.media.mobile} {
     margin: 50px 0 0;

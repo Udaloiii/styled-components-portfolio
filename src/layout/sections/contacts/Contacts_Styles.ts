@@ -7,6 +7,7 @@ import {Title} from "src/components/title/Title.tsx";
 const Contacts = styled.section`
   //padding-top: 60px; // чтобы при скролле учитывало длину Header
   //margin-bottom: 50px;
+  padding-top: 60px;
   ${Title} {
     padding: 0;
   }

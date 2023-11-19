@@ -12,7 +12,7 @@ const FooterName = styled.h3`
   ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 28, Fmin: 18})}
 
   @media ${theme.media.mobile} {
-  padding: 80px;
+  padding: 30px;
 }
 `
 
