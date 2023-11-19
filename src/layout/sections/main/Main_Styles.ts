@@ -35,7 +35,7 @@ const WrapperForImg = styled.div`
       //width: 314px;
       width: 304px;
       height: 414px;
-      top: -20px;
+      top: -29px;
       right: -21px;
     }
   }
