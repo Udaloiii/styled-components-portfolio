@@ -28,7 +28,7 @@ export const Main: FC = () => {
                             /></S.MainTitle>
                     </div>
                     <Tilt
-                        tiltMaxAngleX={10}
+                        tiltMaxAngleX={20}
                         tiltMaxAngleY={30}
                         perspective={800}
                         transitionSpeed={3000}
