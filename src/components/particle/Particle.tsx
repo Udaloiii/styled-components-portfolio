@@ -26,7 +26,7 @@ export const Particle: FC = () => {
                         }
                     },
                     "color": {
-                        "value": "#ffffff"
+                        "value": "#7572D5"
                     },
                     "shape": {
                         "type": "circle",
