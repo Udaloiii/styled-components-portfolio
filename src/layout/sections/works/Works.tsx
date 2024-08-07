@@ -25,8 +25,8 @@ const arrOfProjects: ProjectType[] = [
         id: 1,
         title: "Easy Task",
         text: "",
-        linkDemo: "https://todolist-on-redux.vercel.app/",
-        linkCode: "https://github.com/Udaloiii/todolist_on_redux",
+        linkDemo: "https://easy-tasks.vercel.app/",
+        linkCode: "https://github.com/Udaloiii/Easy-Tasks",
         logo: todos,
         type: "spa"
     },
@@ -35,14 +35,18 @@ const arrOfProjects: ProjectType[] = [
         title: "Social network",
         text: "",
         logo: network,
-        type: "spa"
+        type: "spa",
+        linkDemo: "https://social-network-vite-eta.vercel.app",
+        linkCode: "https://github.com/Udaloiii/social-network-vite",
     },
     {
         id: 3,
         title: "Cards",
         text: "",
         logo: cards,
-        type: "react"
+        type: "react",
+        // linkDemo: "",
+        linkCode: "https://github.com/Udaloiii/flashcards-2024",
     },
 
 ]
